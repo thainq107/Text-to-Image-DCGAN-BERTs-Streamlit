@@ -62,9 +62,9 @@ class Generator(nn.Module):
 generator = Generator(100, 128, 3, 768, 256)
 
 model_name = 'generator.pth'
-if not os.path.exists(model_path):
+if not os.path.exists(model_name):
     gdown.download_folder(id="1EH7B-4w7cLY0RdoZHi6q_zR3ATU49TXL")
-generator.load_state_dict(torch.load("generator.pth"))
+generator.load_state_dict(torch.load(model_name))
 generator.eval()
 
 def main():
