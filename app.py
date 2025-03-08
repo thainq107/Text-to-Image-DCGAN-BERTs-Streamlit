@@ -81,7 +81,7 @@ def main():
 
     npimg = test_images[0].numpy()
     npimg = np.transpose(npimg, (1, 2, 0))
-    st.image(show_grid(npimg))
+    st.image(npimg)
 
 if __name__ == '__main__':
      main() 
