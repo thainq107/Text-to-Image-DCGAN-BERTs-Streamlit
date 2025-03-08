@@ -1,6 +1,7 @@
 import os
 import torch
 import gdown
+import torchvision
 import numpy as np
 import torch.nn as nn
 import streamlit as st
