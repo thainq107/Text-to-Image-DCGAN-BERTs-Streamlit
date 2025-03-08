@@ -58,7 +58,7 @@ class Generator(nn.Module):
         output = self.upsamplingBlock(concat_input)
         return output
 
-generator = Generator()
+generator = Generator(100, 128, 3, 768, 256)
 
 model_name = 'generator.pth'
 if not os.path.exists(model_path):
