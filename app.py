@@ -78,8 +78,10 @@ def main():
     embed_caption = embed_caption.unsqueeze(0)
     with torch.no_grad():
         test_images = generator(noise, embed_caption)
-    grid = torchvision.utils.make_grid(test_images, normalize=True)
-    st.success(show_grid(grid))
+
+    npimg = test_images[0].numpy()
+    npimg = np.transpose(npimg, (1, 2, 0))
+    st.image(show_grid(npimg))
 
 if __name__ == '__main__':
      main() 
