@@ -68,7 +68,7 @@ generator.eval()
 
 def main():
     st.title('Text To Image Using DCGAN-BERTs')
-    st.header('Model: DCGAN. Dataset: Flower. Text Encoder: BERTs)
+    st.header('Model: DCGAN. Dataset: Flower. Text Encoder: BERTs')
     text_input = st.text_input("Sentence: ", "this pale pink flower has a large yellow and green pistil.")
 
     embed_caption = torch.tensor(bert_model.encode(text_input))
