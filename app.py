@@ -81,7 +81,14 @@ def main():
 
     npimg = test_images[0].numpy()
     npimg = np.transpose(npimg, (1, 2, 0))
-    st.image(npimg)
+
+    npimg = ((npimg + 1) / 2 * 255).astype(np.uint8)
+
+    # Chuyển thành ảnh PIL
+    # image_pil = Image.fromarray(fake_image)
+
+    # Hiển thị trong Streamlit
+    st.image(npimg, caption="Generated Image", use_column_width=True)
 
 if __name__ == '__main__':
      main() 
