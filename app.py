@@ -1,4 +1,5 @@
 import torch
+import gdown
 import numpy as np
 import torch.nn as nn
 import streamlit as st
@@ -58,6 +59,10 @@ class Generator(nn.Module):
         return output
 
 generator = Generator()
+
+model_name = 'generator.pth'
+  if not os.path.exists(model_path):
+    gdown.download_folder(id="1EH7B-4w7cLY0RdoZHi6q_zR3ATU49TXL")
 generator.load_state_dict(torch.load("generator.pth"))
 generator.eval()
 
